@@ -1,7 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const DonationCampaignCard = ({ campaign }) => {
-  const { image, title, description, division } = campaign;
+  const { id, image, title, description, division } = campaign;
   return (
     <div className="bg-white shadow-lg rounded-lg overflow-hidden">
       <img src={image} alt="card" className="w-full h-48 object-cover" />
@@ -11,9 +12,12 @@ const DonationCampaignCard = ({ campaign }) => {
         <div className="text-sm text-gray-500 mb-4">
           <strong>Division:</strong> {division}
         </div>
-        <button className="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition duration-300">
+        <Link
+          to={`/donation-campaign/${id}`}
+          className="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition duration-300"
+        >
           Donate Now
-        </button>
+        </Link>
       </div>
     </div>
   );
