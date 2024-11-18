@@ -15,32 +15,32 @@ const Slider = () => {
       slidesPerView={1}
       navigation
       pagination={{ clickable: true }}
-      className="my-4 max-h-[500px]"
+      className="my-4 h-[500px]"
     >
-      <SwiperSlide>
+      <SwiperSlide className="px-2">
         <img
-          className="w-full h-full object-cover px-2 rounded-2xl"
+          className="w-full h-full object-cover rounded-2xl"
           src="/slide-1.jpg"
           alt="slide-1"
         />
       </SwiperSlide>
-      <SwiperSlide>
+      <SwiperSlide className="px-2">
         <img
-          className="w-full px-2 rounded-xl"
+          className="w-full h-full px-2 object-cover rounded-2xl"
           src="/slide-2.jpg"
           alt="slide-2"
         />
       </SwiperSlide>
-      <SwiperSlide>
+      <SwiperSlide className="px-2">
         <img
-          className="w-full px-2 rounded-xl"
+          className="w-full h-full px-2 object-cover rounded-2xl"
           src="/slide-3.jpg"
           alt="slide-3"
         />
       </SwiperSlide>
-      <SwiperSlide>
+      <SwiperSlide className="px-2">
         <img
-          className="w-full px-2 rounded-xl"
+          className="w-full h-full px-2 object-cover rounded-2xl"
           src="/slide-4.jpg"
           alt="slide-4"
         />
