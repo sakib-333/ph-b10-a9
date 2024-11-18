@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
@@ -9,6 +9,9 @@ const Login = () => {
     useContext(AuthContext);
   const [view, setView] = useState(false);
   const navigate = useNavigate();
+  useEffect(() => {
+    document.title = "Log in";
+  }, []);
 
   const handleViewPassword = () => {
     setView((c) => !c);
