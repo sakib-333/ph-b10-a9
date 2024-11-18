@@ -1,12 +1,26 @@
-import React, { useState } from "react";
-import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import React, { useContext, useState } from "react";
+import { FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa";
+import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../provider/AuthProvider";
+import { toast } from "react-toastify";
 
 const Login = () => {
+  const { setUser, signinWithGoogle } = useContext(AuthContext);
   const [view, setView] = useState(false);
+  const navigate = useNavigate();
 
   const handleViewPassword = () => {
     setView((c) => !c);
+  };
+
+  const handleSigninWithGoogle = () => {
+    signinWithGoogle()
+      .then((result) => {
+        setUser(result.user);
+        toast.success(`Welcome ${result.user.displayName}`);
+        navigate("/");
+      })
+      .catch((err) => toast.error(err));
   };
 
   return (
@@ -41,6 +55,14 @@ const Login = () => {
           Log in
         </button>
       </form>
+      <div className="p-4">
+        <button
+          className="btn btn-outline w-full"
+          onClick={handleSigninWithGoogle}
+        >
+          <FaGoogle /> <span>Continue with Google</span>
+        </button>
+      </div>
       <div className="text-center">
         Don't have an account?{" "}
         <Link to={"/register"} className="text-red-500 hover:text-red-300">
