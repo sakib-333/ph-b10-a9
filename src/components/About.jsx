@@ -24,7 +24,7 @@ const About = () => {
               Our Mission
             </h3>
             <p className="text-gray-600">
-              At <span className="font-semibold">Warm Winter Hearts</span>, we
+              At <span className="font-semibold">Winter Donation</span>, we
               strive to collect and distribute winter essentials like coats,
               scarves, and gloves to underprivileged communities. By working
               with donors and volunteers, we aim to ensure warmth and comfort
