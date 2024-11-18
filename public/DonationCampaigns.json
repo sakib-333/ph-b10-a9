@@ -1,0 +1,227 @@
+[
+  {
+    "id": 1,
+    "title": "Warmth for All in Dhaka",
+    "image": "https://i.postimg.cc/HsBJTLgY/campaign1.webp",
+    "description": "Providing blankets and winter clothing to families in need across Dhaka's urban and rural areas.",
+    "status": "ongoing",
+    "contactInfo": "dhaka@relief.org",
+    "division": "Dhaka"
+  },
+  {
+    "id": 2,
+    "title": "Dhaka Winter Relief Mission",
+    "image": "https://i.postimg.cc/TYRL8DBN/campaign2.webp",
+    "description": "Distributing warm jackets and shawls to street dwellers and low-income families in Dhaka.",
+    "status": "finished",
+    "contactInfo": "dhaka@aid.org",
+    "division": "Dhaka"
+  },
+  {
+    "id": 3,
+    "title": "Chattogram Blanket Drive",
+    "image": "https://i.postimg.cc/y6hgrPpS/campaign3.webp",
+    "description": "Delivering blankets to families in Chattogram's rural and coastal areas to shield them from the winter cold.",
+    "status": "ongoing",
+    "contactInfo": "chattogram@relief.org",
+    "division": "Chattogram"
+  },
+  {
+    "id": 4,
+    "title": "Chattogram Winter Aid",
+    "image": "https://i.postimg.cc/fyvVtzSv/campaign4.webp",
+    "description": "Helping low-income families in Chattogram with coats and gloves to endure chilly nights.",
+    "status": "finished",
+    "contactInfo": "chattogram@aid.org",
+    "division": "Chattogram"
+  },
+  {
+    "id": 5,
+    "title": "Sylhet Warm Clothing Campaign",
+    "image": "https://i.postimg.cc/d3F7Vk31/campaign5.webp",
+    "description": "Reaching out to rural Sylhet communities with woolen clothing and scarves for cold weather protection.",
+    "status": "ongoing",
+    "contactInfo": "sylhet@relief.org",
+    "division": "Sylhet"
+  },
+  {
+    "id": 6,
+    "title": "Sylhet Winter Warmth",
+    "image": "https://i.postimg.cc/760G4Mxd/campaign6.webp",
+    "description": "Providing thermal blankets and jackets to families in Sylhet struggling with freezing temperatures.",
+    "status": "finished",
+    "contactInfo": "sylhet@aid.org",
+    "division": "Sylhet"
+  },
+  {
+    "id": 7,
+    "title": "Rajshahi Cozy Care",
+    "image": "https://i.postimg.cc/N0W9ZPwR/campaign7.webp",
+    "description": "Distributing jackets, sweaters, and warm caps to families in Rajshahi during the harsh winter months.",
+    "status": "ongoing",
+    "contactInfo": "rajshahi@relief.org",
+    "division": "Rajshahi"
+  },
+  {
+    "id": 8,
+    "title": "Rajshahi Blanket Donation",
+    "image": "https://i.postimg.cc/bvGSCf4z/campaign8.webp",
+    "description": "Helping families in Rajshahi stay warm with blankets and winter accessories for the cold season.",
+    "status": "finished",
+    "contactInfo": "rajshahi@aid.org",
+    "division": "Rajshahi"
+  },
+  {
+    "id": 9,
+    "title": "Warm Khulna Drive",
+    "image": "https://i.postimg.cc/VkZbWkGG/campaign9.webp",
+    "description": "Supporting low-income families in Khulna with blankets, jackets, and gloves during the winter.",
+    "status": "ongoing",
+    "contactInfo": "khulna@relief.org",
+    "division": "Khulna"
+  },
+  {
+    "id": 10,
+    "title": "Khulna Winter Aid Mission",
+    "image": "https://i.postimg.cc/P55wDw4v/campaign10.webp",
+    "description": "Providing warm clothing to children and elderly residents in Khulna's remote areas.",
+    "status": "finished",
+    "contactInfo": "khulna@aid.org",
+    "division": "Khulna"
+  },
+  {
+    "id": 11,
+    "title": "Barishal Blanket Relief",
+    "image": "https://i.postimg.cc/fTKdkKxh/campaign11.webp",
+    "description": "Reaching out to families in Barishal with blankets and woolen shawls to shield them from the cold weather.",
+    "status": "ongoing",
+    "contactInfo": "barishal@relief.org",
+    "division": "Barishal"
+  },
+  {
+    "id": 12,
+    "title": "Barishal Winter Aid Program",
+    "image": "https://i.postimg.cc/4NZtJMH5/campaign12.webp",
+    "description": "Delivering winter clothing to protect Barishal's vulnerable families from harsh winter conditions.",
+    "status": "finished",
+    "contactInfo": "barishal@aid.org",
+    "division": "Barishal"
+  },
+  {
+    "id": 13,
+    "title": "Rangpur Winter Warmth",
+    "image": "https://i.postimg.cc/xjLMVY88/campaign13.webp",
+    "description": "Providing jackets, blankets, and thermal wear to Rangpur's underprivileged communities facing extreme cold.",
+    "status": "ongoing",
+    "contactInfo": "rangpur@relief.org",
+    "division": "Rangpur"
+  },
+  {
+    "id": 14,
+    "title": "Rangpur Cozy Care Campaign",
+    "image": "https://i.postimg.cc/tJG6nvS9/campaign14.webp",
+    "description": "Distributing warm clothing to protect low-income families in Rangpur from the freezing winter season.",
+    "status": "finished",
+    "contactInfo": "rangpur@aid.org",
+    "division": "Rangpur"
+  },
+  {
+    "id": 15,
+    "title": "Mymensingh Winter Aid",
+    "image": "https://i.postimg.cc/tJdx3dwW/campaign15.webp",
+    "description": "Helping families in Mymensingh with winter clothing and blankets to endure the chilly nights.",
+    "status": "ongoing",
+    "contactInfo": "mymensingh@relief.org",
+    "division": "Mymensingh"
+  },
+  {
+    "id": 16,
+    "title": "Mymensingh Winter Warmth Drive",
+    "image": "https://i.postimg.cc/d1yd1c9W/campaign16.webp",
+    "description": "Providing woolen clothing and thermal blankets to families in Mymensingh facing cold waves.",
+    "status": "finished",
+    "contactInfo": "mymensingh@aid.org",
+    "division": "Mymensingh"
+  },
+  {
+    "id": 17,
+    "title": "Warm Smiles in Dhaka",
+    "image": "https://i.postimg.cc/cJjw0Lfg/campaign17.webp",
+    "description": "Offering woolen clothing and thermal wear to underprivileged children in Dhaka's slums.",
+    "status": "ongoing",
+    "contactInfo": "dhaka@relief.org",
+    "division": "Dhaka"
+  },
+  {
+    "id": 18,
+    "title": "Chattogram Winter Relief",
+    "image": "https://i.postimg.cc/7Lb0F2Jr/campaign18.webp",
+    "description": "Delivering warm caps and gloves to families in Chattogram's hill tracts and coastal areas.",
+    "status": "ongoing",
+    "contactInfo": "chattogram@relief.org",
+    "division": "Chattogram"
+  },
+  {
+    "id": 19,
+    "title": "Sylhet Cold Protection Drive",
+    "image": "https://i.postimg.cc/QdfcYbtq/campaign19.webp",
+    "description": "Distributing jackets and thermal blankets to protect Sylhet's residents from freezing nights.",
+    "status": "ongoing",
+    "contactInfo": "sylhet@relief.org",
+    "division": "Sylhet"
+  },
+  {
+    "id": 20,
+    "title": "Rajshahi Winter Care Mission",
+    "image": "https://i.postimg.cc/8zphb315/campaign20.webp",
+    "description": "Providing winter essentials to children and the elderly in Rajshahi's remote villages.",
+    "status": "finished",
+    "contactInfo": "rajshahi@relief.org",
+    "division": "Rajshahi"
+  },
+  {
+    "id": 21,
+    "title": "Khulna Warmth Mission",
+    "image": "https://i.postimg.cc/ncY4BZfg/campaign21.webp",
+    "description": "Distributing gloves, scarves, and blankets to vulnerable families in Khulna this winter.",
+    "status": "ongoing",
+    "contactInfo": "khulna@relief.org",
+    "division": "Khulna"
+  },
+  {
+    "id": 22,
+    "title": "Barishal Winter Mission",
+    "image": "https://i.postimg.cc/66ZL6nj9/campaign22.webp",
+    "description": "Reaching Barishal's rural areas with jackets, caps, and other warm clothing for families in need.",
+    "status": "ongoing",
+    "contactInfo": "barishal@relief.org",
+    "division": "Barishal"
+  },
+  {
+    "id": 23,
+    "title": "Rangpur Cold Relief",
+    "image": "https://i.postimg.cc/j2yz8YwW/campaign23.webp",
+    "description": "Distributing woolen caps and thermal blankets to families in Rangpur to endure the cold weather.",
+    "status": "finished",
+    "contactInfo": "rangpur@aid.org",
+    "division": "Rangpur"
+  },
+  {
+    "id": 24,
+    "title": "Mymensingh Blanket Drive",
+    "image": "https://i.postimg.cc/02qGzjF7/campaign24.webp",
+    "description": "Reaching out to Mymensingh's underserved areas with winter clothing for vulnerable families.",
+    "status": "finished",
+    "contactInfo": "mymensingh@aid.org",
+    "division": "Mymensingh"
+  },
+  {
+    "id": 25,
+    "title": "Dhaka Winter Warmth Campaign",
+    "image": "https://i.postimg.cc/mDvYNgDf/campaign25.webp",
+    "description": "Helping Dhaka's slum residents stay warm with thermal clothing and blankets this winter.",
+    "status": "ongoing",
+    "contactInfo": "dhaka@aid.org",
+    "division": "Dhaka"
+  }
+]
