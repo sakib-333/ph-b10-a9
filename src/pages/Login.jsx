@@ -5,12 +5,30 @@ import { AuthContext } from "../provider/AuthProvider";
 import { toast } from "react-toastify";
 
 const Login = () => {
-  const { setUser, signinWithGoogle } = useContext(AuthContext);
+  const { setUser, signinWithGoogle, signinWithEmailAndPassword } =
+    useContext(AuthContext);
   const [view, setView] = useState(false);
   const navigate = useNavigate();
 
   const handleViewPassword = () => {
     setView((c) => !c);
+  };
+
+  const handleLoginUser = (e) => {
+    e.preventDefault();
+
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+
+    signinWithEmailAndPassword(email, password)
+      .then((result) => {
+        setUser(result.user);
+        toast.success(`Welcome ${result?.displayName}`);
+        navigate("/");
+      })
+      .catch((err) => {
+        toast.error(err);
+      });
   };
 
   const handleSigninWithGoogle = () => {
@@ -26,11 +44,13 @@ const Login = () => {
   return (
     <div className="px-2 max-w-screen-sm border mx-auto mt-4 p-4 rounded-xl bg-gray-200">
       <h1 className="font-bold text-center md:text-xl lg:text-2xl">Log in</h1>
-      <form className="p-4 space-y-4">
+      <form className="p-4 space-y-4" onSubmit={handleLoginUser}>
         <div>
           <span className="label-text">Email</span>
           <input
             type="email"
+            required
+            name="email"
             placeholder="Enter your email"
             className="input input-bordered input-primary w-full"
           />
@@ -39,6 +59,8 @@ const Login = () => {
           <span className="label-text">Password</span>
           <input
             type={view ? "text" : "password"}
+            name="password"
+            required
             placeholder="Enter your password"
             className="input input-bordered input-primary w-full"
           />
