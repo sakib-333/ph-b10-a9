@@ -24,9 +24,11 @@ const Navbar = () => {
       <li>
         <NavLink to={"/how-to-help"}>How to Help</NavLink>
       </li>
-      <li>
-        <NavLink to={"/dashboard"}>Dashboard</NavLink>
-      </li>
+      {user && (
+        <li>
+          <NavLink to={"/dashboard"}>Dashboard</NavLink>
+        </li>
+      )}
     </>
   );
   return (

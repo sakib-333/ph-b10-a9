@@ -5,6 +5,7 @@ import Register from "../pages/Register";
 import DonationCampaigns from "../pages/DonationCampaigns";
 import HowToHelp from "../pages/HowToHelp";
 import Dashboard from "../pages/Dashboard";
+import PrivateRoute from "../components/PrivateRoute";
 
 export const router = createBrowserRouter([
   {
@@ -29,7 +30,11 @@ export const router = createBrowserRouter([
       },
       {
         path: "/dashboard",
-        element: <Dashboard />,
+        element: (
+          <PrivateRoute>
+            <Dashboard />
+          </PrivateRoute>
+        ),
       },
     ],
   },
