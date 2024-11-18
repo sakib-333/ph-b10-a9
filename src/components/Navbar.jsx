@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 // import organizationLogo from "/organization-logo.png";
 
 const Navbar = () => {
@@ -55,7 +55,9 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{navItems}</ul>
       </div>
       <div className="navbar-end">
-        <a className="btn btn-outline">Log in</a>
+        <Link to={"/login"} className="btn btn-outline">
+          Log in
+        </Link>
       </div>
     </div>
   );
