@@ -1,8 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../provider/AuthProvider";
+import { toast } from "react-toastify";
 // import organizationLogo from "/organization-logo.png";
 
 const Navbar = () => {
+  const { user, setUser, signoutUser } = useContext(AuthContext);
+
+  const handleLogoutUser = () => {
+    signoutUser().then(() => {
+      toast.success(`Bye ${user.displayName}`);
+      setUser(null);
+    });
+  };
   const navItems = (
     <>
       <li>
@@ -55,9 +65,20 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{navItems}</ul>
       </div>
       <div className="navbar-end">
-        <Link to={"/login"} className="btn btn-outline">
-          Log in
-        </Link>
+        {user ? (
+          <>
+            <img className="w-10 rounded-full" src={user.photoURL} alt="user" />
+            <button className="btn btn-outline" onClick={handleLogoutUser}>
+              Log out
+            </button>
+          </>
+        ) : (
+          <>
+            <Link to={"/login"} className="btn btn-outline">
+              Log in
+            </Link>
+          </>
+        )}
       </div>
     </div>
   );
