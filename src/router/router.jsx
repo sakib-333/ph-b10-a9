@@ -6,12 +6,17 @@ import DonationCampaigns from "../pages/DonationCampaigns";
 import HowToHelp from "../pages/HowToHelp";
 import Dashboard from "../pages/Dashboard";
 import PrivateRoute from "../components/PrivateRoute";
+import Home from "../pages/Home";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <HomeLayout />,
     children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
       {
         path: "/login",
         element: <Login />,
