@@ -1,20 +1,20 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../provider/AuthProvider";
+import { toast } from "react-toastify";
 
 const checkPassword = /^(?=.*[A-Z])(?=.*[a-z]).{6,}$/;
 
 const Register = () => {
   const [view, setView] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
+  const navigate = useNavigate();
+  const { createNewUser, updateUserProfile } = useContext(AuthContext);
 
   const handleViewPassword = () => {
     setView((c) => !c);
   };
-
-  useEffect(() => {
-    console.log(errorMsg);
-  }, [errorMsg]);
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -24,8 +24,17 @@ const Register = () => {
     const password = e.target.password.value;
 
     if (checkPassword.test(password)) {
-      console.log("Correct");
       setErrorMsg("");
+      createNewUser(email, password)
+        .then(() => {
+          updateUserProfile({ displayName, photoURL, email, password }).then(
+            () => {
+              toast.success(`Welcome ${displayName}`);
+              navigate("/");
+            }
+          );
+        })
+        .catch((err) => toast.error(err));
     } else {
       setErrorMsg(
         "Must have an uppercase letter, a lowercase letter and length must be at least 6."
