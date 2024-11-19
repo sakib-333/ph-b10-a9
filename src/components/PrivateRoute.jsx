@@ -1,9 +1,13 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { AuthContext } from "../provider/AuthProvider";
-import { Navigate } from "react-router-dom";
+import { Navigate, useLocation } from "react-router-dom";
 
 const PrivateRoute = ({ children }) => {
-  const { user } = useContext(AuthContext);
+  const { user, setDestination } = useContext(AuthContext);
+  const { pathname } = useLocation();
+  useEffect(() => {
+    setDestination(() => pathname);
+  }, [pathname]);
 
   if (user) {
     return children;

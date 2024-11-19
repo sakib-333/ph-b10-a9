@@ -5,7 +5,7 @@ import { AuthContext } from "../provider/AuthProvider";
 import { toast } from "react-toastify";
 
 const Login = () => {
-  const { setUser, signinWithGoogle, signinWithEmailAndPassword } =
+  const { setUser, destination, signinWithGoogle, signinWithEmailAndPassword } =
     useContext(AuthContext);
   const [view, setView] = useState(false);
   const navigate = useNavigate();
@@ -27,7 +27,7 @@ const Login = () => {
       .then((result) => {
         setUser(result.user);
         toast.success(`Welcome ${result?.user?.displayName}`);
-        navigate("/");
+        navigate(`${destination}`);
       })
       .catch(() => {
         toast.error("Something went wrong!\n Please try again");

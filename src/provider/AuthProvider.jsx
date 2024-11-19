@@ -14,6 +14,9 @@ import { auth } from "../firebase/firebase.config";
 export const AuthContext = createContext(null);
 
 const AuthProvider = ({ children }) => {
+  // Destination
+  const [destination, setDestination] = useState("/");
+
   // States
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -70,6 +73,8 @@ const AuthProvider = ({ children }) => {
     createNewUser,
     updateUserProfile,
     signoutUser,
+    destination,
+    setDestination,
   };
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
