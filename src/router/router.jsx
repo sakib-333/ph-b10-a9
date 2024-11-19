@@ -8,6 +8,7 @@ import Dashboard from "../pages/Dashboard";
 import PrivateRoute from "../components/PrivateRoute";
 import Home from "../pages/Home";
 import DonationCampaignDetails from "../pages/DonationCampaignDetails";
+import UpdateProfile from "../pages/UpdateProfile";
 
 export const router = createBrowserRouter([
   {
@@ -43,6 +44,14 @@ export const router = createBrowserRouter([
       {
         path: "/how-to-help",
         element: <HowToHelp />,
+      },
+      {
+        path: "/update-profile",
+        element: (
+          <PrivateRoute>
+            <UpdateProfile />
+          </PrivateRoute>
+        ),
       },
       {
         path: "/dashboard",
