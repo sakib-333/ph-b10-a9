@@ -13,7 +13,7 @@ const ErrorPage = () => {
         moved or deleted.
       </p>
       <Link
-        href="/"
+        to={"/"}
         className="inline-block bg-purple-600 text-white px-6 py-3 rounded-full font-semibold shadow hover:bg-purple-700 transition-all"
       >
         Go Home
