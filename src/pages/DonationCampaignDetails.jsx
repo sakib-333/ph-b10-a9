@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const DonationCampaignDetails = () => {
   const [campaign, setCampaign] = useState({});
@@ -15,7 +16,12 @@ const DonationCampaignDetails = () => {
 
   const handleDonate = (e) => {
     e.preventDefault();
-    console.log("Submitted");
+    toast.success("Thank you! We will reach your destination soon.");
+    e.target.itemsQuantity.value = "";
+    e.target.pickupLocation.value = "";
+    e.target.itemType.value = "";
+    e.target.additionalNotes.value = "";
+    e.target.iAgree.checked = false;
   };
 
   return (
@@ -66,6 +72,7 @@ const DonationCampaignDetails = () => {
               </div>
               <input
                 type="text"
+                name="itemsQuantity"
                 required
                 placeholder="e.g. 2 jackets, 3 blankets"
                 className="input input-bordered w-full"
@@ -77,6 +84,7 @@ const DonationCampaignDetails = () => {
               </div>
               <input
                 type="text"
+                name="pickupLocation"
                 required
                 placeholder="e.g. House 12, Road 5, Dhanmondi, Dhaka"
                 className="input input-bordered w-full"
@@ -88,7 +96,11 @@ const DonationCampaignDetails = () => {
                   Item type &#40;e.g., blanket, jacket, sweater&#41;
                 </span>
               </div>
-              <select required className="select select-bordered">
+              <select
+                required
+                className="select select-bordered"
+                name="itemType"
+              >
                 <option value="">Select any of them</option>
                 <option value="any">Any</option>
                 <option value="blanket">Blanket</option>
@@ -104,19 +116,26 @@ const DonationCampaignDetails = () => {
               </div>
               <textarea
                 className="textarea textarea-bordered"
+                name="additionalNotes"
                 rows={1}
                 placeholder="Write something about your donation &#40;optional&#41;"
               ></textarea>
             </label>
             <div className="form-control">
               <label className="label cursor-pointer justify-start gap-2">
-                <input type="checkbox" required className="checkbox" />
+                <input
+                  type="checkbox"
+                  name="iAgree"
+                  required
+                  className="checkbox"
+                />
                 <span className="label-text">I agree</span>
               </label>
             </div>
             <button
               type="submit"
               className="w-full btn btn-success lg:col-span-2 text-white"
+              disabled={campaign?.status === "finished"}
             >
               Donate
             </button>
