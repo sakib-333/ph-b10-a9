@@ -39,9 +39,9 @@ const Login = () => {
       .then((result) => {
         setUser(result.user);
         toast.success(`Welcome ${result.user.displayName}`);
-        navigate("/");
+        navigate(`${destination}`);
       })
-      .catch((err) => toast.error(err));
+      .catch((err) => toast.error(`${err}`));
   };
 
   return (

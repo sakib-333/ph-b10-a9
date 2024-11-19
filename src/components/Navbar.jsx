@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import { toast } from "react-toastify";
@@ -6,6 +6,7 @@ import { toast } from "react-toastify";
 
 const Navbar = () => {
   const { user, setUser, signoutUser } = useContext(AuthContext);
+  const [profileLink, setProfileLink] = useState(null);
 
   const handleLogoutUser = () => {
     signoutUser().then(() => {
@@ -13,6 +14,12 @@ const Navbar = () => {
       setUser(null);
     });
   };
+
+  useEffect(() => {
+    if (user?.photoURL) {
+      setProfileLink(() => user?.photoURL);
+    }
+  }, [user]);
 
   const navItems = (
     <>
@@ -72,7 +79,7 @@ const Navbar = () => {
           <>
             <img
               className="w-10 rounded-full"
-              src={`${user?.photoURL}`}
+              src={`${profileLink}`}
               alt="user"
             />
             <button className="btn btn-outline" onClick={handleLogoutUser}>
