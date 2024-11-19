@@ -29,8 +29,8 @@ const Login = () => {
         toast.success(`Welcome ${result?.displayName}`);
         navigate("/");
       })
-      .catch((err) => {
-        toast.error(err);
+      .catch(() => {
+        toast.error("Something went wrong!\n Please try again");
       });
   };
 
