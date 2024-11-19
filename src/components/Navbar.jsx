@@ -13,6 +13,7 @@ const Navbar = () => {
       setUser(null);
     });
   };
+
   const navItems = (
     <>
       <li>
@@ -69,7 +70,11 @@ const Navbar = () => {
       <div className="navbar-end">
         {user ? (
           <>
-            <img className="w-10 rounded-full" src={user.photoURL} alt="user" />
+            <img
+              className="w-10 rounded-full"
+              src={`${user?.photoURL}`}
+              alt="user"
+            />
             <button className="btn btn-outline" onClick={handleLogoutUser}>
               Log out
             </button>

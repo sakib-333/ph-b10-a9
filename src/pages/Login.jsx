@@ -26,7 +26,7 @@ const Login = () => {
     signinWithEmailAndPassword(email, password)
       .then((result) => {
         setUser(result.user);
-        toast.success(`Welcome ${result?.displayName}`);
+        toast.success(`Welcome ${result?.user?.displayName}`);
         navigate("/");
       })
       .catch(() => {
