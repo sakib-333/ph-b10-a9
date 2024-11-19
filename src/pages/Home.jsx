@@ -4,10 +4,13 @@ import About from "../components/About";
 import HowItWorks from "../components/HowItWorks";
 import Sponsors from "../components/Sponsors";
 import FAQ from "../components/FAQ";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Home = () => {
   useEffect(() => {
     document.title = "Winter Donation";
+    Aos.init({ disable: "mobile" });
   }, []);
 
   return (

@@ -16,7 +16,10 @@ const HowItWorks = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Instructions for Donation */}
-          <div className="bg-gray-100 shadow-lg rounded-lg p-6">
+          <div
+            className="bg-gray-100 shadow-lg rounded-lg p-6"
+            data-aos="flip-left"
+          >
             <h3 className="text-2xl font-bold text-gray-800 mb-4">
               Instructions for Donation
             </h3>
@@ -36,7 +39,10 @@ const HowItWorks = () => {
           </div>
 
           {/* Collection Points and Supported Divisions */}
-          <div className="bg-gray-100 shadow-lg rounded-lg p-6">
+          <div
+            className="bg-gray-100 shadow-lg rounded-lg p-6"
+            data-aos="flip-right"
+          >
             <h3 className="text-2xl font-bold text-gray-800 mb-4">
               Collection Points & Supported Divisions
             </h3>

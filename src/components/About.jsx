@@ -19,7 +19,10 @@ const About = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Mission Section */}
-          <div className="bg-white shadow-lg rounded-lg p-6">
+          <div
+            className="bg-white shadow-lg rounded-lg p-6"
+            data-aos="fade-left"
+          >
             <h3 className="text-2xl font-bold text-gray-800 mb-4">
               Our Mission
             </h3>
@@ -33,7 +36,10 @@ const About = () => {
           </div>
 
           {/* Contribution Section */}
-          <div className="bg-white shadow-lg rounded-lg p-6">
+          <div
+            className="bg-white shadow-lg rounded-lg p-6"
+            data-aos="fade-right"
+          >
             <h3 className="text-2xl font-bold text-gray-800 mb-4">
               How You Can Contribute
             </h3>

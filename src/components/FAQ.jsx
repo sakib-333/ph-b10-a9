@@ -2,7 +2,11 @@ import React from "react";
 
 const FAQ = () => {
   return (
-    <section className="bg-gray-100 py-16 my-4 md:my-12">
+    <section
+      className="bg-gray-100 py-16 my-4 md:my-12"
+      data-aos="fade-up"
+      data-aos-duration="2000"
+    >
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-gray-800 mb-4">
