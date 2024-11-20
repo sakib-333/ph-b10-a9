@@ -1,13 +1,11 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
+import { AuthContext } from "../provider/AuthProvider";
 
 const ForgetPassword = () => {
+  const { inputEmail } = useContext(AuthContext);
   const handleForgetPassword = (e) => {
     e.preventDefault();
   };
-
-  useEffect(() => {
-    console.log(emailRef.current);
-  }, []);
 
   return (
     <div className="max-w-screen-sm border mx-auto my-4 p-8 rounded-xl bg-gray-200">
@@ -18,13 +16,17 @@ const ForgetPassword = () => {
           <span className="label-text">Email</span>
           <input
             type="email"
+            defaultValue={inputEmail}
             required
             name="email"
             placeholder="Enter your email"
             className="input input-bordered input-primary w-full"
           />
         </div>
-        <a href="#" className="btn btn-success w-full text-white">
+        <a
+          href={`mailto:${inputEmail}`}
+          className="btn btn-success w-full text-white"
+        >
           Reset Password
         </a>
       </form>

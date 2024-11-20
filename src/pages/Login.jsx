@@ -5,8 +5,13 @@ import { AuthContext } from "../provider/AuthProvider";
 import { toast } from "react-toastify";
 
 const Login = () => {
-  const { setUser, destination, signinWithGoogle, signinWithEmailAndPassword } =
-    useContext(AuthContext);
+  const {
+    setUser,
+    destination,
+    signinWithGoogle,
+    signinWithEmailAndPassword,
+    setInputEmail,
+  } = useContext(AuthContext);
   const [view, setView] = useState(false);
   const navigate = useNavigate();
   useEffect(() => {
@@ -44,6 +49,10 @@ const Login = () => {
       .catch((err) => toast.error(`${err}`));
   };
 
+  const handleInputEmail = (e) => {
+    setInputEmail(() => e.target.value);
+  };
+
   return (
     <div className="px-2 max-w-screen-sm border mx-auto mt-4 p-4 rounded-xl bg-gray-200">
       <h1 className="font-bold text-center md:text-xl lg:text-2xl">Log in</h1>
@@ -52,6 +61,7 @@ const Login = () => {
           <span className="label-text">Email</span>
           <input
             type="email"
+            onChange={(e) => handleInputEmail(e)}
             required
             name="email"
             placeholder="Enter your email"

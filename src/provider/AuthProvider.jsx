@@ -16,6 +16,7 @@ export const AuthContext = createContext(null);
 const AuthProvider = ({ children }) => {
   // Destination
   const [destination, setDestination] = useState("/");
+  const [inputEmail, setInputEmail] = useState("");
 
   // States
   const [user, setUser] = useState(null);
@@ -75,6 +76,8 @@ const AuthProvider = ({ children }) => {
     signoutUser,
     destination,
     setDestination,
+    inputEmail,
+    setInputEmail,
   };
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
