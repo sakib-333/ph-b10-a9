@@ -1,12 +1,11 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import { toast } from "react-toastify";
 // import organizationLogo from "/organization-logo.png";
 
 const Navbar = () => {
-  const { user, setUser, signoutUser } = useContext(AuthContext);
-  const [profileLink, setProfileLink] = useState(null);
+  const { user, loading, setUser, signoutUser } = useContext(AuthContext);
 
   const handleLogoutUser = () => {
     signoutUser().then(() => {
@@ -14,12 +13,6 @@ const Navbar = () => {
       setUser(null);
     });
   };
-
-  useEffect(() => {
-    if (user?.photoURL) {
-      setProfileLink(() => user?.photoURL);
-    }
-  }, [user]);
 
   const navItems = (
     <>
@@ -80,12 +73,15 @@ const Navbar = () => {
       <div className="navbar-end">
         {user ? (
           <>
-            <img
-              title={user?.displayName}
-              className="w-10 rounded-full"
-              src={`${profileLink}`}
-              alt="user"
-            />
+            {!loading && (
+              <img
+                title={user?.displayName}
+                className="w-10 rounded-full"
+                src={`${user.photoURL}`}
+                alt="user"
+              />
+            )}
+
             <button className="btn btn-outline" onClick={handleLogoutUser}>
               Log out
             </button>
