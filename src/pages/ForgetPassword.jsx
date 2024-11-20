@@ -3,8 +3,10 @@ import { AuthContext } from "../provider/AuthProvider";
 
 const ForgetPassword = () => {
   const { inputEmail } = useContext(AuthContext);
+
   const handleForgetPassword = (e) => {
     e.preventDefault();
+    window.location.href = "https://mail.google.com/mail/u/0/";
   };
 
   return (
@@ -23,12 +25,9 @@ const ForgetPassword = () => {
             className="input input-bordered input-primary w-full"
           />
         </div>
-        <a
-          href={`mailto:${inputEmail}`}
-          className="btn btn-success w-full text-white"
-        >
+        <button className="btn btn-success w-full text-white">
           Reset Password
-        </a>
+        </button>
       </form>
     </div>
   );
