@@ -1,7 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import HomeLayout from "../layouts/HomeLayout";
 import Login from "../pages/Login";
-import Register from "../pages/Register";
 import DonationCampaigns from "../pages/DonationCampaigns";
 import HowToHelp from "../pages/HowToHelp";
 import Dashboard from "../pages/Dashboard";
@@ -11,6 +10,7 @@ import DonationCampaignDetails from "../pages/DonationCampaignDetails";
 import UpdateProfile from "../pages/UpdateProfile";
 import ErrorPage from "../pages/ErrorPage";
 import Blogs from "../pages/Blogs";
+import Registration from "../pages/Registration";
 
 export const router = createBrowserRouter([
   {
@@ -27,8 +27,8 @@ export const router = createBrowserRouter([
         element: <Login />,
       },
       {
-        path: "/register",
-        element: <Register />,
+        path: "/registration",
+        element: <Registration />,
       },
       {
         path: "/donation-campaigns",

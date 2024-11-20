@@ -6,7 +6,7 @@ import { toast } from "react-toastify";
 
 const checkPassword = /^(?=.*[A-Z])(?=.*[a-z]).{6,}$/;
 
-const Register = () => {
+const Registration = () => {
   const [view, setView] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
   const navigate = useNavigate();
@@ -14,7 +14,7 @@ const Register = () => {
     useContext(AuthContext);
 
   useEffect(() => {
-    document.title = "Register";
+    document.title = "Registration";
   }, []);
 
   const handleViewPassword = () => {
@@ -52,14 +52,16 @@ const Register = () => {
         .catch((err) => toast.error(`${err}`));
     } else {
       setErrorMsg(
-        "Must have an uppercase letter, a lowercase letter and length must be at least 6."
+        "Must have an uppercase letter, a lowercase letter and length at least 6."
       );
     }
   };
 
   return (
     <div className="px-2 max-w-screen-sm border mx-auto my-4 p-4 rounded-xl bg-gray-200">
-      <h1 className="font-bold text-center md:text-xl lg:text-2xl">Register</h1>
+      <h1 className="font-bold text-center md:text-xl lg:text-2xl">
+        Registration
+      </h1>
       <form className="p-4 space-y-4" onSubmit={handleRegister}>
         <div>
           <span className="label-text">Name</span>
@@ -130,4 +132,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default Registration;

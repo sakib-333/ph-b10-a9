@@ -81,6 +81,7 @@ const Navbar = () => {
         {user ? (
           <>
             <img
+              title={user?.displayName}
               className="w-10 rounded-full"
               src={`${profileLink}`}
               alt="user"

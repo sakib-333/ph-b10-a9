@@ -74,6 +74,12 @@ const Login = () => {
           >
             {view ? <FaEye /> : <FaEyeSlash />}
           </button>
+          <Link
+            to={"/forget-password"}
+            className="label-text-alt hover:underline"
+          >
+            Forget Password?
+          </Link>
         </div>
 
         <button type="submit" className="btn btn-success w-full text-white">
@@ -90,8 +96,8 @@ const Login = () => {
       </div>
       <div className="text-center">
         Don't have an account?{" "}
-        <Link to={"/register"} className="text-red-500 hover:text-red-300">
-          Register
+        <Link to={"/registration"} className="text-red-500 hover:text-red-300">
+          Registration
         </Link>
       </div>
     </div>

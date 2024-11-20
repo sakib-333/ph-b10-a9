@@ -8,7 +8,7 @@ const DonationCampaignDetails = () => {
 
   const { id } = useParams();
   useEffect(() => {
-    document.title = `Donation Details of ${id}`;
+    document.title = `Donation Details id ${id}`;
 
     const camp = campaigns.filter((item) => item.id.toString() === id);
     setCampaign(() => camp[0]);
@@ -51,12 +51,9 @@ const DonationCampaignDetails = () => {
           </div>
           <div className="mb-4">
             <span className="font-semibold text-gray-800">Contact:</span>{" "}
-            <a
-              href={`mailto:${campaign?.contactInfo}`}
-              className="text-indigo-600 hover:underline"
-            >
+            <span className="text-indigo-600 hover:underline">
               {campaign?.contactInfo}
-            </a>
+            </span>
           </div>
           <div className="mb-4">
             <span className="font-semibold text-gray-800">Division:</span>{" "}
