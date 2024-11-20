@@ -10,6 +10,7 @@ import Home from "../pages/Home";
 import DonationCampaignDetails from "../pages/DonationCampaignDetails";
 import UpdateProfile from "../pages/UpdateProfile";
 import ErrorPage from "../pages/ErrorPage";
+import Blogs from "../pages/Blogs";
 
 export const router = createBrowserRouter([
   {
@@ -46,6 +47,10 @@ export const router = createBrowserRouter([
       {
         path: "/how-to-help",
         element: <HowToHelp />,
+      },
+      {
+        path: "/blogs",
+        element: <Blogs />,
       },
       {
         path: "/update-profile",
