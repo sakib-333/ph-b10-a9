@@ -11,6 +11,7 @@ import UpdateProfile from "../pages/UpdateProfile";
 import ErrorPage from "../pages/ErrorPage";
 import Blogs from "../pages/Blogs";
 import Registration from "../pages/Registration";
+import ForgetPassword from "../pages/ForgetPassword";
 
 export const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ export const router = createBrowserRouter([
       {
         path: "/login",
         element: <Login />,
+      },
+      {
+        path: "/forget-password",
+        element: <ForgetPassword />,
       },
       {
         path: "/registration",
