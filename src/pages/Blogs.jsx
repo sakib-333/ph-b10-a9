@@ -6,7 +6,8 @@ const blogs = [
     title: "The Importance of Winter Clothing Donations",
     description:
       "Learn why donating winter clothing can save lives and bring warmth to those in need during the cold season.",
-    image: "https://via.placeholder.com/400x200",
+    image:
+      "https://i.postimg.cc/gkGLbLQB/Importance-of-Winter-Clothing-Donations.png",
     date: "November 20, 2024",
   },
   {
@@ -14,7 +15,7 @@ const blogs = [
     title: "How to Get Involved in Winter Drives",
     description:
       "Discover how you can contribute to winter clothing donation drives in your community.",
-    image: "https://via.placeholder.com/400x200",
+    image: "https://i.postimg.cc/t4wgJsvb/Winter-Drives.png",
     date: "November 18, 2024",
   },
   {
@@ -22,7 +23,7 @@ const blogs = [
     title: "Stories of Impact: Lives Changed by Your Donations",
     description:
       "Read inspiring stories of individuals who have been helped by generous donations like yours.",
-    image: "https://via.placeholder.com/400x200",
+    image: "https://i.postimg.cc/zBSDx0zD/Lives-Changed.png",
     date: "November 15, 2024",
   },
   {
@@ -30,7 +31,7 @@ const blogs = [
     title: "Top 5 Items to Donate This Winter",
     description:
       "Find out which winter clothing items are most needed and how to prioritize your donations.",
-    image: "https://via.placeholder.com/400x200",
+    image: "https://i.postimg.cc/2jG8vc92/Donate-This-Winter.png",
     date: "November 10, 2024",
   },
   {
@@ -38,7 +39,7 @@ const blogs = [
     title: "Volunteer Opportunities Near You",
     description:
       "Explore ways to volunteer your time and make a direct impact in winter donation programs.",
-    image: "https://via.placeholder.com/400x200",
+    image: "https://i.postimg.cc/L609QqpP/Volunteer-Opportunities.png",
     date: "November 8, 2024",
   },
   {
@@ -46,7 +47,7 @@ const blogs = [
     title: "Sustainable Giving: Recycling and Repurposing Clothes",
     description:
       "Learn how to ensure your donations are sustainable and benefit the environment as well as people.",
-    image: "https://via.placeholder.com/400x200",
+    image: "https://i.postimg.cc/yxpHGGwK/Repurposing-Clothes.png",
     date: "November 5, 2024",
   },
 ];
