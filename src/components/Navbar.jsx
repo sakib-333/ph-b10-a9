@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import { toast } from "react-toastify";
-// import organizationLogo from "/organization-logo.png";
+import organizationLogo from "/organization-logo.png";
 
 const Navbar = () => {
   const { user, loading, setUser, signoutUser } = useContext(AuthContext);
@@ -62,10 +62,10 @@ const Navbar = () => {
             {navItems}
           </ul>
         </div>
-        {/* <div className="flex items-center">
+        <div className="flex items-center">
           <img className="w-12 h-12" src={organizationLogo} alt="logo" />
-        </div> */}
-        <h1 className="font-bold md:text-xl lg:text-2xl">Winter Donation</h1>
+        </div>
+        {/* <h1 className="font-bold md:text-xl lg:text-2xl">Winter Donation</h1> */}
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{navItems}</ul>
