@@ -9,7 +9,6 @@ This website will connect donors with volunteers for these people, making it eas
 ## Key features
 
 1. Firebase authentication
-   
 2. Log in, log out, register, and, update profile.
 
 3. View all the on going and finished campaigns.
@@ -26,4 +25,4 @@ This website will connect donors with volunteers for these people, making it eas
 
 ## Live URL
 
-1. Live link: [visit](https://sakib-333-ph-10-a9.netlify.app/)
+1. Live link: [visit](https://sakib-333-ph-b10-a9.netlify.app/)
