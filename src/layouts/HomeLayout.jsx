@@ -9,7 +9,7 @@ const HomeLayout = () => {
 
   return (
     <>
-      <div className="max-w-screen-2xl mx-auto">
+      <div className="max-w-screen-2xl mx-auto overflow-hidden">
         <Navbar />
         <div className="min-h-screen">
           {loading ? (
