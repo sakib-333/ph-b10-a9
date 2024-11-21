@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 import logo from "/logo.png";
 
 const Navbar = () => {
-  const { user, loading, setUser, signoutUser } = useContext(AuthContext);
+  const { user, setUser, signoutUser } = useContext(AuthContext);
 
   const handleLogoutUser = () => {
     signoutUser().then(() => {
@@ -71,27 +71,22 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{navItems}</ul>
       </div>
       <div className="navbar-end">
-        {user ? (
-          <>
-            {!loading && (
-              <img
-                title={user?.displayName}
-                className="w-10 rounded-full"
-                src={`${user.photoURL}`}
-                alt="user"
-              />
-            )}
-
+        {user === null ? (
+          <Link to={"/login"} className="btn btn-outline">
+            Log in
+          </Link>
+        ) : (
+          <div className="flex items-center gap-2">
+            <img
+              title={user?.displayName}
+              className="w-10 rounded-full"
+              src={`${user.photoURL}`}
+              alt="user"
+            />
             <button className="btn btn-outline" onClick={handleLogoutUser}>
               Log out
             </button>
-          </>
-        ) : (
-          <>
-            <Link to={"/login"} className="btn btn-outline">
-              Log in
-            </Link>
-          </>
+          </div>
         )}
       </div>
     </div>
