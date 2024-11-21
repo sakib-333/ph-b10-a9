@@ -1,37 +1,29 @@
-# B10A9
+# Winter Clothing Donation
 
-## Description
+## Purpose
 
-Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis magni
-modi explicabo rem aut quibusdam itaque velit omnis dolorem, dolore
-provident, quis ab sed voluptatibus nesciunt dolores atque officia eius.
+The Winter Donation web application is a simple and easy-to-use platform that helps people donate winter clothing to those in need across Bangladesh.
+When the weather gets colder, thousands of vulnerable people, especially in rural and low-income areas, struggle to stay warm because they don’t have enough warm clothing.
+This website will connect donors with volunteers for these people, making it easy for users to donate clothes and bring warmth to those who need it most.
 
-## React Fundamental concepts used
+## Key features
 
-1. JSX
+1. Firebase authentication
+   
+2. Log in, log out, register, and, update profile.
 
-2. State
+3. View all the on going and finished campaigns.
 
-3. React hooks
+4. Unauthorized users can not see campaign details.
 
-4. React router
+5. Log in first then visit private route(campaign details, dashboard)
 
-## Five key features
+## npm packages
 
-1. Features-1
+1. AOS
+2. Swiper
+3. React Toastify
 
-2. Features-2
+## Live URL
 
-3. Features-3
-
-4. Features-4
-
-5. Features-5
-
-## For Data Management
-
-1. What techonology(Context api, local storage, database) is used to manage data.
-
-## Live links
-
-1. Live link: [visit](www.demo-project-live-link.com)
+1. Live link: [visit](https://sakib-333-ph-10-a9.netlify.app/)
