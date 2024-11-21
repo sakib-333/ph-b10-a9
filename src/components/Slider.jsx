@@ -3,7 +3,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Navigation, Pagination } from "swiper/modules";
+import "swiper/css/autoplay"; // Import autoplay styles
+import { Navigation, Pagination, Autoplay } from "swiper/modules"; // Import Autoplay
 
 const Slider = () => {
   const slides = [
@@ -34,12 +35,16 @@ const Slider = () => {
           Our Initiatives
         </h2>
         <Swiper
-          modules={[Navigation, Pagination]}
+          modules={[Navigation, Pagination, Autoplay]} // Add Autoplay module
           navigation
           pagination={{ clickable: true }}
           spaceBetween={30}
           slidesPerView={1}
           loop={true}
+          autoplay={{
+            delay: 2000, // Auto change every 2 seconds
+            disableOnInteraction: false, // Keeps autoplay running even after manual interaction
+          }}
           className="px-2 mx-auto"
         >
           {slides.map((slide) => (
