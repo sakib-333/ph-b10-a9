@@ -8,8 +8,9 @@ This website will connect donors with volunteers for these people, making it eas
 
 ## Key features
 
-1. Firebase authentication
-2. Log in, log out, register, and, update profile.
+1. Firebase authentication.
+   
+2. Log in, log out, register, and, update profile, reset password.
 
 3. View all the on going and finished campaigns.
 

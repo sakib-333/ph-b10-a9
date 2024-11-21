@@ -1,12 +1,19 @@
 import React, { useContext } from "react";
 import { AuthContext } from "../provider/AuthProvider";
+import { toast } from "react-toastify";
 
 const ForgetPassword = () => {
-  const { inputEmail } = useContext(AuthContext);
+  const { inputEmail, forgetPassword } = useContext(AuthContext);
 
   const handleForgetPassword = (e) => {
     e.preventDefault();
-    window.location.href = "https://mail.google.com/mail/u/0/";
+
+    const email = e.target.email.value;
+    forgetPassword(email)
+      .then(() => {
+        window.location.href = "https://mail.google.com/mail/u/0/";
+      })
+      .catch(() => toast.error("Something went wrong!"));
   };
 
   return (
